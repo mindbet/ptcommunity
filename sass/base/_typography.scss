@@ -1,0 +1,815 @@
+
+/*
+@font-face {
+    font-family: 'noto_sansbold';
+    src: url('fonts/notosans-bold-webfont.eot');
+    src: url('fonts/notosans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/notosans-bold-webfont.woff2') format('woff2'),
+         url('fonts/notosans-bold-webfont.woff') format('woff'),
+         url('fonts/notosans-bold-webfont.ttf') format('truetype'),
+         url('fonts/notosans-bold-webfont.svg#noto_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'noto_sansbold_italic';
+    src: url('fonts/notosans-bolditalic-webfont.eot');
+    src: url('fonts/notosans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/notosans-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/notosans-bolditalic-webfont.woff') format('woff'),
+         url('fonts/notosans-bolditalic-webfont.ttf') format('truetype'),
+         url('fonts/notosans-bolditalic-webfont.svg#noto_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'noto_sansitalic';
+    src: url('fonts/notosans-italic-webfont.eot');
+    src: url('fonts/notosans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/notosans-italic-webfont.woff2') format('woff2'),
+         url('fonts/notosans-italic-webfont.woff') format('woff'),
+         url('fonts/notosans-italic-webfont.ttf') format('truetype'),
+         url('fonts/notosans-italic-webfont.svg#noto_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'noto_sansregular';
+    src: url('fonts/notosans-regular-webfont.eot');
+    src: url('fonts/notosans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/notosans-regular-webfont.woff2') format('woff2'),
+         url('fonts/notosans-regular-webfont.woff') format('woff'),
+         url('fonts/notosans-regular-webfont.ttf') format('truetype'),
+         url('fonts/notosans-regular-webfont.svg#noto_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*/
+
+
+
+
+
+
+
+body {
+  font-family: "Noto Sans", san-serif;
+  line-height:21px;
+  @include font-size(14);
+  color: #333;
+  word-wrap: break-word;
+  }
+
+
+
+
+
+
+
+b,strong {
+  font-weight: bold;
+}
+
+i,em {
+  font-style: italic;
+}
+
+a:link {
+color: #3D4288;
+}
+
+
+
+sub {
+  font-size: 75%;
+}
+
+sup {
+  font-size: 75%;
+}
+
+
+
+
+.search-results h3 {
+  @include font-size(16);
+  margin-top: 1rem;
+  margin-bottom: .25rem;
+  font-weight: bold;
+}
+
+
+
+
+
+h4 {
+  font-weight: bold;
+  @include font-size(18);
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: .25rem;
+}
+
+
+.subhead {
+font-weight: bold;
+}
+
+
+h5 {
+  font-weight: bold;
+  @include font-size(16);
+  line-height:1.3;
+  font-style: italic;
+}
+
+p {
+margin-bottom: .5rem;
+}
+
+.l-content h1 {
+  @include font-size(20);
+  line-height: 1.2;
+  margin-bottom:.25rem;
+  font-weight: bold;
+  @include breakpoint($phone) {
+  @include font-size(28);
+}
+  @include breakpoint($tab) {
+  padding-right:2em;
+	}
+}
+
+.l-content h1.news-story-title {
+  @include font-size(18);
+  line-height: 1.2;
+  margin-bottom:.25rem;
+  font-weight: bold;
+  @include breakpoint($phone) {
+  @include font-size(26);
+}
+  @include breakpoint($tab) {
+  padding-right:2em;
+	}
+}
+
+
+.l-content h1.journal-story-title {
+  @include font-size(18);
+  line-height: 1.2;
+  margin-bottom:.25rem;
+  font-weight: bold;
+  @include breakpoint($phone) {
+  @include font-size(26);
+}
+  @include breakpoint($tab) {
+  padding-right:2em;
+	}
+}
+
+
+
+
+.l-content h1.video-clip-title {
+  @include font-size(18);
+  line-height: 1.2;
+  margin-bottom:.25rem;
+  font-weight: bold;
+  @include breakpoint($phone) {
+  @include font-size(26);
+}
+  @include breakpoint($tab) {
+  padding-right:2em;
+	}
+}
+
+
+
+
+
+
+.node__title {
+  @include font-size(26);
+	line-height:1.3;
+	margin-bottom:.3em;
+	font-weight: bold;
+}
+
+
+a:link {
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+
+
+
+.views-ptcommunity-daily-news-block .views-field-title {
+  @include font-size(20);
+  line-height: 1.3;
+  font-weight: bold;
+  }
+
+.views-field-field-b-head {
+  @include font-size(14);
+  margin-bottom: 1rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+
+.block--views-ptcommunity-daily-news-block .block__title {
+  margin-bottom:1em;
+  }
+
+
+
+
+
+
+
+
+
+
+.view-display-id-block_1 .views-field-title {
+  @include font-size(16);
+  line-height: 1.3;
+  font-weight: bold;
+  }
+
+.view-display-id-block_1 .views-field-field-b-head {
+  @include font-size(14);
+  padding-top: 0;
+  padding-bottom: 12px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.block--views-news-headlines-block {
+margin-top:1em;
+padding-top:.5em;
+border-top: solid 1px gray;
+}
+
+
+
+
+
+
+
+
+
+h3 .date-display-single  {
+  @include font-size(21);
+  margin-bottom:9px;
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+.field--name-field-b-head {
+  @include font-size(18);
+  font-style: italic;
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+
+
+.view-id-ptcommunity_daily_news h3 {
+  @include font-size(24);
+  margin-top:24px;
+  margin-bottom:9px;
+}
+
+
+
+
+
+
+
+ul {
+margin-left:1rem;
+margin-bottom:.5rem;
+padding-left:1rem;
+}
+
+
+.block__title {
+  @include font-size(20);
+  text-transform: uppercase;
+  }
+
+
+
+
+
+
+sup {
+line-height:0;
+font-size:75%;
+position: relative;
+top:-4px;
+}
+
+table {
+  @include font-size(14);
+margin-bottom:1em;
+}
+
+table td {
+  border: solid 1px gray;
+  padding: 2px 3px 1px 4px;
+  vertical-align: top;
+  background-color: #ffffff;
+}
+
+
+td ul  {
+  margin-left:.5em;
+}
+
+td ul li  {
+  margin-left:.5em;
+}
+
+
+
+
+table th {
+  font-weight: bold;
+  text-align: center;
+  border: solid 1px gray;
+  padding: 2px 3px 1px 4px;
+  vertical-align: middle;
+}
+
+
+td.colhead {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+
+td.colhead:first-child {
+  text-align: left;
+}
+
+
+
+
+
+.source-photo-left {
+  float: left;
+  padding: 4px 10px 4px 0;
+}
+
+.source-photo-left img {
+  width:180px;
+}
+
+.source-photo-left p {
+  @include font-size(13);
+}
+
+
+
+.source-photo-right {
+  float: right;
+  padding: 4px 0 4px 10px;
+}
+
+
+.source-photo-right img {
+  width:180px;
+}
+
+.source-photo-right p {
+  @include font-size(13);
+}
+
+
+
+h2 {
+  @include font-size(18);
+  line-height: 1.2;
+  margin-bottom:.25rem;
+  font-weight: bold;
+  @include breakpoint($tab) {
+  @include font-size(22);
+  }
+}
+
+
+
+
+.field--name-field-referencelist li {
+  @include font-size(14);
+}
+
+.field--name-built-author-1,
+.field--name-built-author-2,
+.field--name-built-author-3,
+.field--name-built-author-4,
+.field--name-built-author-5,
+.field--name-built-author-6,
+.field--name-built-author-7,
+.field--name-built-author-8, {
+  font-weight: bold;
+}
+
+
+
+
+
+.field--name-field-subtitle {
+  @include font-size(15);
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+
+.field--name-body p:first-of-type {
+  margin-top:1em;
+}
+
+
+
+
+.node--ptjournalarticle p,li,table {
+}
+
+
+
+.field--name-built-author-1,.field--name-built-author-2,.field--name-built-author-3 p {
+  margin-bottom: 0;
+}
+
+
+
+
+.loginbuttons {
+  padding-top:6px;
+}
+
+
+
+
+
+
+.button--login {
+  font-size: 13px;
+  padding: 3px 9px;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #5158b5;
+  color: white;
+  @include breakpoint($narrowdesk) {
+  font-size: 15px;
+  }
+  }
+
+.button--login a {
+  color: white;
+}
+
+.button--register {
+  font-size: 13px;
+  padding: 3px 9px;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #5158b5;
+  color: white;
+  margin-left: 0;
+  margin-right: 16px;
+  @include breakpoint($narrowdesk) {
+    font-size: 15px;
+  }
+}
+
+.button--register a {
+  color: white;
+}
+
+.view-ptcommunity-daily-news {
+  margin-top: 1em;
+}
+
+.field--name-field-authorlist {
+  font-weight: bold;
+  @include font-size(16);
+  margin-bottom: 1em;
+  margin-top: .25em;
+}
+
+.field--name-node-link {
+  border-radius: 6px;
+  padding:3px 6px;
+  background-color:#5158b5;
+  width: 90px;
+  margin-top:.5em;
+  margin-bottom:2em;
+}
+
+.field--name-node-link a {
+  color: white;
+  font-size: 15px;
+}
+
+
+.field--name-node-link a:hover {
+  text-decoration: none;
+}
+
+
+.rotate90CCW  {
+  @include rotateZ(-90deg);
+}
+
+
+
+.m4logo {
+  text-align: right;
+  padding-top:7px;
+  padding-right:1em;
+}
+
+
+
+
+.view-drug-forecast .views-field-title {
+  font-weight: bold;
+  @include font-size(16);
+  line-height:1.2;
+
+}
+
+.view-drug-forecast .views-field-field-subtitle {
+  @include font-size(14);
+  font-weight: bold;
+  margin-bottom:0;
+
+}
+
+.view-drug-forecast .views-field-field-authorlist {
+  @include font-size(14);
+  font-style: italic;
+  margin-bottom:1em;
+}
+
+
+
+
+
+.view-pipeline-plus .views-field-title {
+  font-weight: bold;
+  @include font-size(16);
+  line-height:1.2;
+}
+
+.view-pipeline-plus  .views-field-field-subtitle {
+  @include font-size(14);
+  font-weight: bold;
+  margin-bottom:0;
+}
+
+.view-pipeline-plus .views-field-field-authorlist {
+  @include font-size(14);
+  font-style: italic;
+  margin-bottom:1em;
+}
+
+
+
+
+
+
+.views-field-title {
+  font-weight: bold;
+  @include font-size(20);
+  line-height:1.2;
+}
+
+.views-field-field-subtitle {
+  @include font-size(16);
+  font-weight: bold;
+  margin-bottom:0;
+}
+
+
+
+
+
+
+
+
+.view-drug-forecast .views-field-field-authorlist {
+  font-style: italic;
+  @include font-size(14);
+}
+
+
+.field--name-field-author {
+  font-style: italic;
+  @include font-size(14);
+}
+
+
+.journallabel {
+  font-weight: bold;
+}
+
+
+.view-editorial-board h2 {
+  @include font-size(16);
+  font-weight: bold;
+}
+
+.view-editorial-board .field--type-text {
+  @include font-size(14);
+}
+
+
+table.archivegrid td {
+  background-color: #fbf6ef;
+  border: solid 4px white;
+  padding:4px 12px;
+}
+
+
+.view-events .views-field-title {
+  @include font-size(16);
+  font-weight: bold;
+  margin-top:1em;
+}
+
+.view-events .views-field-field-location {
+  @include font-size(14);
+}
+
+
+.view-events .views-field-field-event-begins {
+  @include font-size(14);
+}
+
+
+
+
+
+
+
+.user-profile-category-history h2 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+
+.field--name-field-pdf-version {
+  margin-top:.5em;
+}
+
+
+
+
+
+
+.field--name-field-story-abstract {
+  background-color: #eee;
+  padding: 6px 4px 4px 6px;
+  border: solid 1px gray;
+  margin: 16px 0;
+}
+
+.field--name-field-story-abstract h4 {
+  font-weight: bold;
+  @include font-size(16);
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: .25rem;
+}
+
+.field--name-field-story-abstract h4:first-of-type {
+  margin-top: 0;
+}
+
+
+.node-type-meeting-report p.presenter {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.node-type-meeting-report p.presenter-affiliation {
+  margin-top: 0;
+}
+
+.field--name-field-full-width-image blockquote.image-field-caption {
+  margin-top:0;
+  margin-left:0;
+}
+
+
+.field--name-field-full-width-image blockquote.image-field-caption p {
+  text-align: left;
+  font-size: 12px;
+  font-style: italic;
+  margin-top:0;
+  line-height: 12px;
+}
+
+
+.field--name-field-displayobjects {
+  display: none;
+  @include breakpoint($tab) {
+  display: block;
+  }
+}
+
+
+
+
+// Stylings for responsive menu in mobile mode
+
+
+.responsive-menus.responsified span.toggler {
+  padding: 12px 1px 1px 12px;
+  display: block;
+  background: #333;
+  box-shadow: 0 0 0 0;
+  border-radius: 0;
+  color: #fff;
+  font-size: .875rem;
+  height: 44px;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.responsive-menus.responsified .responsive-menus-simple {
+  display: none;
+  width: 100%;
+  background: #333;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 0;
+}
+
+
+
+.responsive-menus.responsified .responsive-menus-simple li a {
+  color: #fff;
+  display: block;
+  padding: 1em 5%;
+  margin: 0;
+  text-align: left;
+  color: #fff;
+  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+

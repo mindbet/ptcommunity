@@ -1,0 +1,503 @@
+// Import external libraries.
+@import 'compass';
+@import 'breakpoint';
+@import 'singularitygs';
+// @import 'toolkit-no-css';
+@import 'toolkit';
+@import 'compass/css3/transform';
+@import 'compass/css3/columns';
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies should not be a problem.
+
+@include add-grid(16);
+@include add-gutter(1/2);
+
+
+@import 'variables/**/*';
+@import 'abstractions/**/*';
+@import 'base/**/*';
+@import 'components/**/*';
+@import 'layouts/**/*';
+@import 'print';
+
+
+@import url(//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
+
+
+
+
+body {
+  background: #eceef1;
+}
+
+
+.node-unpublished {
+  background-color: #FFFFFF;
+}
+
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+.l-page {
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, .0976563) 0 0 0 1px, rgba(0, 0, 0, .0976563) 2px 2px 8px 0;
+  margin: 0 auto;
+// @include background-grid($color: blue);
+
+
+  @include breakpoint($tab) {
+    width: $tab;
+  }
+
+  @include breakpoint($narrowdesk) {
+    width: $narrowdesk;
+  }
+
+  @include breakpoint($desk) {
+    width: $desk;
+  }
+}
+
+
+
+.l-main {
+  @include clearfix;
+}
+/*
+*/
+
+
+
+
+
+
+.l-content {
+  padding: 0 14px 2em 14px;
+  @include clearfix;
+  @include breakpoint($narrowdesk) {
+  padding: 30px 14px 28px 14px;
+    @include grid-span(10, 1);
+}
+}
+
+
+// main content area for formkits
+
+.formkit .l-content {
+  padding: 28px 14px;
+
+  @include breakpoint($narrowdesk) {
+    @include grid-span(16, 1);
+    padding: 28px 14px 0 0;
+}
+}
+
+
+.report .l-content {
+  padding: 28px 14px;
+
+  @include breakpoint($narrowdesk) {
+    @include grid-span(16, 1);
+    padding: 28px 14px 0 0;
+}
+}
+
+
+// main content area for p&t articles
+
+.fulltextarticle .l-content {
+  padding: 28px 14px;
+
+  @include breakpoint($narrowdesk) {
+    @include grid-span(16, 1);
+    padding: 28px 94px 0 0;
+}
+}
+
+
+
+
+
+// main content area for user functions
+
+.page-user .l-content {
+  padding: 28px 14px;
+
+  @include breakpoint($narrowdesk) {
+    @include grid-span(16, 1);
+    padding: 28px 14px 0 0;
+}
+}
+
+
+.l-contentcontainer {
+  @include breakpoint($narrowdesk) {
+    @include grid-span(13, 4);
+}
+}
+
+
+
+.l-region--sidebar-first {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 32px;
+  @include clearfix;
+
+  @include breakpoint($tab) {
+//    @include column-count(2);
+//    @include column-gap(40px);
+  }
+
+  @include breakpoint($narrowdesk) {
+    @include column-count(1);
+    @include grid-span(3, 1);
+}
+}
+
+
+
+
+
+
+.l-region--sidebar-second {
+  background-color: #f2f2f2;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 28px;
+  padding-bottom: 32px;
+
+  @include breakpoint($tab) {
+    padding-left: 1em;
+    padding-right: 1em;
+    @include column-count(2);
+    @include column-gap(40px);
+  }
+
+  @include breakpoint($narrowdesk) {
+    @include column-count(1);
+    @include grid-span(6, 11);
+  }
+}
+
+// 728x90 below content
+
+/*
+.l-region--contentlayerbottom {
+  display: none;
+
+@include breakpoint($tab) {
+    display: block;
+    height: 110px;
+    margin: 28px auto 14px auto;
+    width: 728px;
+}
+
+  @include breakpoint($narrowdesk) {
+    display: block;
+    height: 220px;
+    margin: 28px auto 14px 0;
+    padding-bottom: 28px 0 120px 0;
+    width: 728px;
+}
+}
+*/
+
+
+
+
+//    padding-left:1em;
+//    border-left:solid 1px #d2d2d2;
+
+
+
+//  top band for 'over-the-top' banner ads
+
+//  .l-topband {
+//  height:110px;
+//  margin-bottom: 0;
+//  background-color: #f1f1f1;
+//  position:fixed;
+//  z-index:100;
+//  @include breakpoint($tab) {
+//  width: $tab;
+//  }
+//  @include breakpoint($narrowdesk) {
+//  width: $narrowdesk;
+//  }
+//  @include breakpoint($desk) {
+//  width: $desk;
+//  }
+//  }
+
+
+
+
+
+//   moves branding down for top band
+//   top:110px;
+
+
+
+// sets admin menu at high z-index so that it is not covered by ads or header
+
+#admin-menu {
+  z-index: 2200000;
+}
+
+
+
+
+
+
+.l-topband {
+  background-color: #3d4288;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, .06);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .06);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .06);
+  height: 41px;
+  position: fixed;
+  width: 100%;
+  z-index: 2000100;
+
+  @include breakpoint($tab) {
+    width: $tab;
+  }
+
+  @include breakpoint($narrowdesk) {
+    width: $narrowdesk;
+  }
+
+  @include breakpoint($desk) {
+    width: $desk;
+}
+}
+
+
+.l-region--navigation {
+  background-color: black;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, .06);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .06);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .06);
+  margin-top: 41px;
+  position: fixed;
+  width: 100%;
+  z-index: 2000100;
+
+  @include breakpoint($tab) {
+    width: $tab;
+  }
+
+  @include breakpoint($narrowdesk) {
+    width: $narrowdesk;
+  }
+
+  @include breakpoint($desk) {
+    width: $desk;
+}
+}
+
+
+.l-region--topshim {
+  height: 86px;
+  @include clearfix;
+}
+
+
+.l-region--branding {
+  margin: 0 auto 0 auto;
+}
+
+
+
+
+// moves this down for top band
+// padding-top:192px;
+
+
+
+.l-region--header {
+  @include breakpoint($tab) {
+  border-bottom: solid 7px #e07731;
+  margin-bottom: 0;
+  @include clearfix;
+  }
+}
+
+
+.l-region--footer {
+  height: 180px;
+  padding: 14px;
+  @include clearfix;
+}
+
+
+/*
+previous background color
+#fefefe;
+#e7e7e7;
+*/
+
+
+
+ul.breadcrumb {
+  display: none;
+}
+
+.l-header p {
+  margin-bottom: 0;
+}
+
+
+.l-main ol li {
+  list-style: decimal;
+}
+
+
+.l-main ul li {
+  list-style: disc;
+}
+
+
+
+ul.tabs li {
+  list-style: none;
+}
+
+
+
+.page-formkit-data .l-content,
+.page-formkit-stats .l-content {
+  margin-right: 0;
+  width: 800px;
+}
+
+.page-formkit-data .view-id-fk_view_r2 td.views-field-timestamp,
+.page-formkit-stats .view-id-fk_view_r2 td.views-field-timestamp {
+  width: 90px;
+}
+
+.page-formkit-data .view-id-fk_view_r2 td.views-field-timestamp tr,
+.page-formkit-stats .view-id-fk_view_r2 td.views-field-timestamp tr {
+  page-break-inside: avoid;
+}
+
+
+
+
+
+
+
+
+
+.block-formkit-menu-narrow {
+  padding: 9px 3px 3px 6px;
+  background: #e6f6fd;
+}
+
+.l-main .block-formkit-menu-narrow ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.l-main .block-formkit-menu-narrow ul li {
+  margin-top: 14px;
+  font-size: .88rem;
+  list-style-type: none;
+  line-height: 18px;
+}
+
+
+.block-formkit-menu-narrow .warning {
+  margin-top:0;
+  padding-top: 0;
+  font-size: .82rem;
+  line-height: 18px;
+}
+
+
+.block-formkit-menu-narrow .warning {
+  margin-top:0;
+  padding-top: 0;
+  font-size: .82rem;
+  line-height: 18px;
+}
+
+
+.l-region--sidebar-second .block--block {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+
+.l-region--sidebar-second .block--views {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+
+.block--views-kit-downloads-rev-2-block-1 {
+    page-break-inside: avoid;
+}
+
+.block--views-wire-list-block-1 {
+  padding-bottom: 16px;
+}
+
+
+.page-headlines .view-id-wire_list .views-field-title {
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: .75rem;
+}
+
+
+.block--views-wire-list-block-1 .views-field-title {
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: .75rem;
+}
+
+
+
+
+
+
+td.views-field-uid-1 {
+  text-align: right;
+}
+
+td.views-field-uid {
+  text-align: right;
+}
+
+
+th.views-field-uid-1 {
+  text-align: right;
+}
+
+th.views-field-uid {
+  text-align: right;
+}
+
+

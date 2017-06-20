@@ -1,0 +1,6 @@
+@mixin svg-bg($name, $extension: png, $color: transparent, $position: 0 0, $repeat: no-repeat) {
+  background: url(/sites/default/files/graphics/#{$name}.#{$extension}) $color $position $repeat;
+  background: none, url(/sites/default/files/graphics/#{$name}.svg) $color $position $repeat;
+}
+
+

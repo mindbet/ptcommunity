@@ -1,0 +1,94 @@
+
+
+
+
+//	TOP HEADER
+
+.block-formkit-menu-with-header .menugraphic {
+  background-image: url('/sites/default/files/graphics/formkit_logo_2015_240x72.png');
+  background-repeat: no-repeat;
+  float: left;
+  height: 72px;
+  width: 240px;
+}
+
+
+//	LEVEL ONE
+
+.block-formkit-menu-with-header ul.dropdown {
+  list-style: none;
+  margin: 0;
+  padding:0;
+  }
+
+
+
+.block-formkit-menu-with-header ul.dropdown ul {
+  left: 0;
+  margin-left: 0;
+  position: absolute;
+  top: 100%; 
+  visibility: hidden;
+  width: 300px;
+}
+
+
+
+
+
+.block-formkit-menu-with-header ul.dropdown li { 
+  float: left; 
+  min-height: 72px;
+  width: 300px;
+  z-index: 2;
+  zoom: 1; 
+  }
+
+.block-formkit-menu-with-header ul.dropdown a:hover { color: #000; }
+.block-formkit-menu-with-header ul.dropdown a:active { color: #ffa500; }
+.block-formkit-menu-with-header ul.dropdown li a { display: block; padding: 6px 8px 8px 8px;  color: #222; text-align:center;}
+.block-formkit-menu-with-header ul.dropdown li:last-child a { border-right: none; } /* Doesn't work in IE */
+.block-formkit-menu-with-header ul.dropdown li:hover { background: none; color: #000; position: relative; }
+.block-formkit-menu-with-header ul.dropdown li.hover a { color: #000; }
+
+
+//	LEVEL TWO
+
+.block-formkit-menu-with-header ul.dropdown ul  {
+  padding-left: 0;
+  list-style: none;
+}
+
+.block-formkit-menu-with-header ul.dropdown ul li {
+  background: #f6f6f6; 
+  border-bottom: 1px solid #ccc; 
+  -moz-box-shadow: -4px 0 4px 0 #999;
+  -webkit-box-shadow: -4px 0 4px 0 #999;
+  box-shadow: -4px 0 4px 0 #999;
+  color: #000;
+  float: none; 
+  font-weight: normal; 
+  min-height: 10px;
+}
+
+.block-formkit-menu-with-header ul.dropdown ul li:hover {
+  background: #ffd3bc; 
+  color: #000; 
+  position: relative;
+}
+
+  
+// IE 6 & 7 Needs Inline Block 
+
+.block-formkit-menu-with-header ul.dropdown ul li a { 
+  border-right: none; 
+  display: inline-block; 
+  min-height: 30px; 
+  text-align: left;
+  width: 100%; 
+  } 
+
+// LEVEL THREE
+
+.block-formkit-menu-with-header ul.dropdown ul ul { left: 100%; top: 0; }
+.block-formkit-menu-with-header ul.dropdown li:hover > ul { visibility: visible; }

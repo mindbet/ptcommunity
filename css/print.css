@@ -1,0 +1,35 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@media print {
+  /*  #block-search-form {
+   *    display: none !important;
+   *  }              */
+  .l-topband {
+    display: none !important;
+  }
+
+  .l-region--navigation {
+    display: none !important;
+  }
+
+  .l-region--footerstatic {
+    display: none !important;
+  }
+
+  /*  .l-region--sidebar-first {
+   *  display: none !important;
+   * }    */
+  /* .loginbuttons {
+   *   display: none !important;
+   * }         */
+  #block-views-video-box-promo-block-1 {
+    display: none !important;
+  }
+
+  /*
+    .l-branding {
+      display: none !important;
+    }   
+  */
+}

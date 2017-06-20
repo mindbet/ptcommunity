@@ -1,0 +1,179 @@
+
+// 728x90 below header, above content
+
+.block--dfp-ptc-728x90-mid-2 {
+  display: none;
+
+  @include breakpoint($tab) {
+    display: block;
+    height: 90px;
+    margin: 15px auto 0 auto;
+    width: 728px;
+}
+
+  @include breakpoint($narrowdesk) {
+    display: block;
+    height: 90px;
+    margin: 15px auto 0 0;
+    width: 728px;
+}
+}
+
+
+
+
+
+// 728x90 above site logo
+.block--dfp-ptc-728x90-fixed-top {
+  display: none;
+
+  @include breakpoint($tab) {
+    display: block;
+    height: 90px;
+    margin: 10px auto 10px auto;
+    width: 728px;
+}
+}
+
+
+
+
+
+// 728x90 top band
+.block--dfp-ptc-728x90-top-1 {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.block--dfp-ptc-300x250-atf,
+.block--dfp-ptc-300x600-1,
+.block--dfp-ptc-300x250-2,
+.block--dfp-ptc-300x250-3,
+.block--dfp-ptc-300x250-4,
+.block--dfp-ptc-300x250-5 {
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
+
+
+
+.lazyadslot-ptc_300x250_atf_0,
+.lazyadslot-ptc_300x250_2_0,
+.lazyadslot-ptc_300x250_3_0,
+.lazyadslot-ptc_300x250_4_0,
+.lazyadslot-ptc_300x250_5_0,
+.lazyadslot-ptc_300x250_6_0 {
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
+
+
+
+.block--block.block-second-sidebar-top-anchor {
+  margin-bottom: 0;
+}
+
+
+
+
+
+.block--dfp-pt-468x60-content-middle-1 {
+  display:none;
+    @include breakpoint($tab) {
+      display: block;
+      margin: 2em auto 2em auto;
+      text-align: center;
+    }
+}
+
+
+
+
+.block--dfp {
+  margin-bottom: 2em;
+}
+
+
+
+  .block--dfp-ptc-728x90-fixed {
+    display:none;
+    background-color: #e7e7e7;
+    bottom: 0;
+    -moz-box-shadow: 0 -4px 4px rgba(0, 0, 0, .06);
+    -webkit-box-shadow: 0 -4px 4px rgba(0, 0, 0, .06);
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, .06);
+    height: 110px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 1000100;
+
+    @include breakpoint($tab) {
+      display: block;
+      width: $tab;
+    }
+
+    @include breakpoint($narrowdesk) {
+      width: $narrowdesk;
+    }
+
+    @include breakpoint($desk) {
+      width: $desk;
+    }
+  }
+/*
+*/
+
+
+.block--dfp-ptc-160x600-1 {
+  text-align: center;
+}
+
+
+// if there is an interstitial ad, make background white rather than black
+
+#cboxOverlay {
+  background: #fff;
+}
+
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000300;
+  overflow: hidden;
+}
+
+
+
+
+#dfp-ad-300x250_interstitial-wrapper {
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  display: block;
+  position: fixed;
+  background-color: white;
+  opacity: .8;
+}
+
+
+#dfp-ad-300x250_interstitial {
+  z-index: 1000;
+  background-color: green;
+  width: 300px;
+  height: 250px;
+  display: block;
+  margin: auto;
+  opacity: 1;
+}
+
+

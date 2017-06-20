@@ -1,0 +1,130 @@
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 0;
+}
+
+ul.nice-menu li {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  border: 0;
+  border-top: 0;
+  float: left; /* LTR */
+  background-color: black;
+}
+
+ul.nice-menu li ul li {
+  font-weight: 400;
+}
+
+
+ul.nice-menu a {
+  text-transform: uppercase;
+  color: white;
+  padding: 5px 24px 5px 24px;
+}
+
+
+ul.nice-menu a:hover {
+  text-decoration: none;
+  background-color: red;
+}
+
+
+
+
+  ul.nice-menu li a.active { 
+  background-color: red;
+  }
+
+
+
+
+
+
+ul.nice-menu ul {
+  top: 30px;
+  left: -1px; /* LTR */
+  border: 0;
+  margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li a {
+  background-color: #dedede;
+  width: 12.5em;
+  color: black;
+}
+
+
+
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+  border-top: 0;
+}
+
+ul.nice-menu-down li li {
+  border-top: 0;
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right: 24px; /* LTR */
+}
+
+ul.nice-menu-down li.menuparent {
+  background: black url("../images/arrow-down.png") right center no-repeat; 
+  margin-right: 12px;
+  /* LTR */
+}
+
+ul.nice-menu-down li.menuparent:hover {
+  background: red url("../images/arrow-down.png") right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent {
+  background: #eee url("../images/arrow-right.png") right center no-repeat; /* LTR */
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: #ccc url("../images/arrow-right.png") right center no-repeat; /* LTR */
+}
+

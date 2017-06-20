@@ -1,0 +1,13 @@
+@mixin font-size($sizeValue:12) {
+  font-size: $sizeValue + px; // fallback for old browsers
+  font-size: (1/16 * $sizeValue) + rem;
+}
+
+
+
+
+footer p {
+  font-size:.75em;
+  line-height:1.4;
+  margin-top:0;
+  }
